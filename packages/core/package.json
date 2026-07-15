@@ -1,0 +1,24 @@
+{
+  "name": "@howie-daily-helpers/core",
+  "version": "1.0.0",
+  "description": "基础工具函数 （无框架依赖，纯 TS）",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": "./dits/index.js",
+    "./is": "./dits/is.js",
+    "./logger": "./dits/logger.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "howie-daily-helpers",
+    "core",
+    "utils",
+    "no-framework"
+  ],
+  "author": "howie",
+  "license": "ISC",
+  "packageManager": "pnpm@10.26.0"
+}
