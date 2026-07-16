@@ -1,0 +1,15 @@
+import { defineConfig } from 'tsup';
+
+export default defineConfig({
+  entry: {
+    'index/index': 'src/index.ts',
+    'is/index': 'src/is.ts',
+    'logger/index': 'src/logger.ts',
+  },
+  outDir: 'dist',
+  dts: true,
+  format: ['esm', 'cjs'],
+  splitting: false,
+  sourcemap: false,
+  clean: true,
+});

@@ -2,15 +2,19 @@
   "name": "@howie-daily-helpers/core",
   "version": "1.0.0",
   "description": "基础工具函数 （无框架依赖，纯 TS）",
-  "main": "index.js",
   "type": "module",
   "exports": {
-    ".": "./dits/index.js",
-    "./is": "./dits/is.js",
-    "./logger": "./dits/logger.js"
+    ".": "./dist/index.js",
+    "./is": "./dist/is/index.js",
+    "./logger": "./dist/logger/index.js"
   },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "package.json"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup"
   },
   "keywords": [
     "howie-daily-helpers",

@@ -2,17 +2,23 @@
   "name": "howie-daily-helpers",
   "version": "1.0.0",
   "description": "Daily helpers for TypeScript",
+  "type": "module",
   "scripts": {
     "test": "vitest",
-    "test:coverage": "vitest --coverage"
+    "test:coverage": "vitest --coverage",
+    "docs:dev": "pnpm --filter @howie-daily-helpers/docs run dev",
+    "build:all": "pnpm -r run build",
+    "rm:dist": "pnpm -r run rm:dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.26.0",
   "devDependencies": {
+    "@types/node": "^26.1.1",
     "@vitest/coverage-v8": "4.1.10",
-    "typescript": "^7.0.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.7.3",
     "vitest": "^4.1.10"
   }
 }

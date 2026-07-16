@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "declaration": false,
+    "rootDir": "../..",
+    "paths": {
+      "@howie-daily-helpers/*": ["../../packages/*/src/index.ts"]
+    }
+  },
+  "include": [".vitepress/**/*.ts", ".vitepress/**/*.tsx", ".vitepress/**/*.vue", "*.mts", "*.ts"]
+}
