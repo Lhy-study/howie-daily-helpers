@@ -4,9 +4,11 @@
     "jsx": "react-jsx",
     "declaration": false,
     "rootDir": "../..",
-    "paths": {
-      "howie-daily-helpers-*": ["../../packages/*/src/index.ts"]
-    }
   },
+  "references": [
+    {
+      "path": "../../packages/core"
+    }
+  ],
   "include": [".vitepress/**/*.ts", ".vitepress/**/*.tsx", ".vitepress/**/*.vue", "*.mts", "*.ts"]
 }
