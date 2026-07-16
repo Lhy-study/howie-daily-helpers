@@ -7,7 +7,12 @@ export default defineConfig({
     'logger/index': 'src/logger.ts',
   },
   outDir: 'dist',
-  dts: true,
+  dts: {
+    // 核心：让 tsup 在生成 dts 时，覆盖掉 composite 限制
+    compilerOptions: {
+      composite: false,
+    },
+  },
   format: ['esm', 'cjs'],
   splitting: false,
   sourcemap: false,

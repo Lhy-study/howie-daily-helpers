@@ -30,8 +30,11 @@
     "package.json"
   ],
   "scripts": {
+    "build:types": "tsc --build",
     "build": "tsup",
     "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage",
     "prepublishOnly": "pnpm run build && pnpm run test",
     "publish:release": "pnpm publish --access public",
     "publish:minor": "pnpm version minor && pnpm run publish",
