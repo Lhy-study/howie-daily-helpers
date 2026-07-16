@@ -1,7 +1,8 @@
 {
-  "name": "@howie-daily-helpers/docs",
+  "name": "howie-daily-helpers-docs",
   "version": "1.0.0",
   "description": "howie-daily-helpers docs",
+  "private": true,
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
@@ -17,7 +18,7 @@
     "@vitejs/plugin-react": "catalog:",
     "vue": "catalog:",
     "vitepress": "1.6.4",
-    "@howie-daily-helpers/core": "workspace:*"
+    "howie-daily-helpers-core": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "catalog:",

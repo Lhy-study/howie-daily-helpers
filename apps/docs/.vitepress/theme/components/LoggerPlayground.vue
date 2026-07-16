@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, computed, onUnmounted } from 'vue'
-import { createLogger } from '@howie-daily-helpers/core'
+import { createLogger } from 'howie-daily-helpers-core'
 
 const moduleName = ref('user-service')
 const input = ref('服务启动')

@@ -47,7 +47,7 @@ importers:
 
   apps/docs:
     dependencies:
-      '@howie-daily-helpers/core':
+      'howie-daily-helpers-core':
         specifier: workspace:*
         version: link:../../packages/core
       '@vitejs/plugin-react':

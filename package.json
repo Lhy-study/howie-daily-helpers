@@ -4,11 +4,13 @@
   "description": "Daily helpers for TypeScript",
   "type": "module",
   "scripts": {
-    "test": "vitest",
-    "test:coverage": "vitest --coverage",
-    "docs:dev": "pnpm --filter @howie-daily-helpers/docs run dev",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage --config ./vitest.config.ts",
+    "docs:dev": "pnpm --filter howie-daily-helpers-docs run dev",
+    "docs:build": "pnpm --filter howie-daily-helpers-docs run build",
     "build:all": "pnpm -r run build",
-    "rm:dist": "pnpm -r run rm:dist"
+    "rm:dist": "pnpm -r run rm:dist",
+    "bootstrap": "pnpm -r install"
   },
   "keywords": [],
   "author": "",

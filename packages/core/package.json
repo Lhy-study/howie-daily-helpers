@@ -1,12 +1,28 @@
 {
-  "name": "@howie-daily-helpers/core",
-  "version": "1.0.0",
+  "name": "howie-daily-helpers-core",
+  "version": "1.0.1",
   "description": "基础工具函数 （无框架依赖，纯 TS）",
   "type": "module",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
-    ".": "./dist/index.js",
-    "./is": "./dist/is/index.js",
-    "./logger": "./dist/logger/index.js"
+    ".": {
+      "types": "./dist/index/index.d.ts",
+      "import": "./dist/index/index.js",
+      "require": "./dist/index/index.cjs"
+    },
+    "./is": {
+      "types": "./dist/is/index.d.ts",
+      "import": "./dist/is/index.js",
+      "require": "./dist/is/index.cjs"
+    },
+    "./logger": {
+      "types": "./dist/logger/index.d.ts",
+      "import": "./dist/logger/index.js",
+      "require": "./dist/logger/index.cjs"
+    }
   },
   "files": [
     "dist/**/*",
@@ -14,7 +30,13 @@
     "package.json"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "test": "vitest run",
+    "prepublishOnly": "pnpm run build && pnpm run test",
+    "publish:release": "pnpm publish --access public",
+    "publish:minor": "pnpm version minor && pnpm run publish",
+    "publish:patch": "pnpm version patch && pnpm run publish",
+    "publish:major": "pnpm version major && pnpm run publish"
   },
   "keywords": [
     "howie-daily-helpers",

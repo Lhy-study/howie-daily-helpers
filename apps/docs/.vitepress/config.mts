@@ -22,7 +22,7 @@ export default defineConfig({
     resolve: {
       alias: {
         // 文档中可直接引用 core 子包源码，便于做可交互示例
-        '@howie-daily-helpers/core': resolve(import.meta.dirname, '../../../packages/core/src'),
+        'howie-daily-helpers-core': resolve(import.meta.dirname, '../../../packages/core/src'),
       },
     },
   },

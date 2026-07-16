@@ -1,5 +1,5 @@
 import { useState, useMemo, useRef } from 'react';
-import { createLogger } from '@howie-daily-helpers/core';
+import { createLogger } from 'howie-daily-helpers-core';
 
 type Level = 'info' | 'error' | 'warn' | 'debug';
 
