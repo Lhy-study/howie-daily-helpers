@@ -1,5 +1,7 @@
 # 部署工作流程 https://vuejs.github.io/vitepress/v1/zh/guide/deploy#netlify-vercel-cloudflare-pages-aws-amplify-render
 
+# vercel / cloudflare pages
+
 # 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
 #
 name: Deploy VitePress site to Pages
