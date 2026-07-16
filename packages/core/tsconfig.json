@@ -1,10 +1,13 @@
 {
   "extends": "../../tsconfig.base.json",
-  "declaration": false,
   "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
     "outDir": "./dist",
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "strict": true
   },
-  "exclude": ["tsup.config.ts", "test/**/*"],
-  "include": ["src/**/*"]
+  "exclude": ["tsup.config.ts", "test/**/*", "dist"],
+  "include": ["src/**/*.ts"]
 }
