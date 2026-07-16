@@ -46,7 +46,7 @@ export default defineConfig({
           { text: '概览', link: '/core/' },
           { text: 'is 类型判断', link: '/core/is' },
           { text: 'logger 日志记录', link: '/core/logger' },
-          { text: 'AsyncTaskScheduler 任务调度', link: '/core/AsyncTaskScheduler' },
+          { text: 'AsyncTaskScheduler 任务调度', link: '/core/asyncTaskScheduler' },
         ],
       },
     ],
