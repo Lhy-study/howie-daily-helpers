@@ -1,0 +1,33 @@
+{
+  "name": "howie-daily-helpers-shared",
+  "version": "1.0.0",
+  "description": "共享工具函数/配置",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./dist/config.d.ts",
+      "import": "./dist/config.js"
+    }
+  },  
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "howie-daily-helpers",
+    "core",
+    "utils",
+    "no-framework"
+  ],
+  "author": "howie",
+  "license": "ISC",
+  "packageManager": "pnpm@10.26.0"
+}
