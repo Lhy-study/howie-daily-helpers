@@ -28,7 +28,7 @@ export const createLogger: (moduleName: string) => {
 ### 示例
 
 ```ts
-import { createLogger } from './logger';
+import { createLogger } from 'howie-daily-helpers-core';
 
 const logger = createLogger('user-service');
 

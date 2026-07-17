@@ -47,7 +47,7 @@ addTask<Result>(task: () => Promise<Result>): Promise<Result>
 ### 限制并发数批量请求
 
 ```ts
-import { AsyncTaskScheduler } from './AsyncTaskScheduler';
+import { AsyncTaskScheduler } from 'howie-daily-helpers-core';
 
 const scheduler = new AsyncTaskScheduler({
   maxConcurrency: 2,
@@ -70,7 +70,7 @@ ids.forEach((id) => {
 ### 获取单个任务的结果
 
 ```ts
-import { AsyncTaskScheduler } from './AsyncTaskScheduler';
+import { AsyncTaskScheduler } from 'howie-daily-helpers-core';
 
 const scheduler = new AsyncTaskScheduler({ maxConcurrency: 3 });
 
@@ -83,7 +83,7 @@ const result = await scheduler.addTask(async () => {
 ### 失败的任务是独立的
 
 ```ts
-import { AsyncTaskScheduler } from './AsyncTaskScheduler';
+import { AsyncTaskScheduler } from 'howie-daily-helpers-core';
 
 const scheduler = new AsyncTaskScheduler({ maxConcurrency: 1 });
 
