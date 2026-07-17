@@ -45,6 +45,18 @@ importers:
         specifier: ^4.1.10
         version: 4.1.10(@types/node@26.1.1)(@vitest/coverage-v8@4.1.10)(vite@8.1.4(@types/node@26.1.1)(esbuild@0.27.7))
 
+  ai/rag:
+    dependencies:
+      howie-daily-helpers-shared:
+        specifier: workspace:*
+        version: link:../shared
+    devDependencies:
+      dotenv:
+        specifier: ^17.4.2
+        version: 17.4.2
+
+  ai/shared: {}
+
   apps/docs:
     dependencies:
       '@vitejs/plugin-react':
@@ -74,18 +86,6 @@ importers:
         version: 18.3.7(@types/react@18.3.31)
 
   packages/core: {}
-
-  packages/rag:
-    dependencies:
-      howie-daily-helpers-shared:
-        specifier: workspace:*
-        version: link:../shared
-    devDependencies:
-      dotenv:
-        specifier: ^17.4.2
-        version: 17.4.2
-
-  packages/shared: {}
 
 packages:
 
