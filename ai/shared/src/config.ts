@@ -33,28 +33,36 @@ export interface SharedConfig {
 }
 
 /**
- * 创建共享配置，支持 Node.js 和 Cloudflare Workers 双环境
- * - 不传参数时自动读取 process.env（Node.js）
  * - 传入 env 绑定时适配 Cloudflare Workers
  */
-export function createSharedConfig(envSource?: Record<string, string | undefined>): SharedConfig {
-  const env = envSource ?? (typeof process !== 'undefined' ? process.env as Record<string, string | undefined> : {});
+export function createSharedConfig(
+  envSource: Record<string, string | undefined>,
+): SharedConfig {
+  const env = envSource;
 
   const get = (key: ENV_KEY_ENUM, defaultValue?: string): string => {
     const value = env[key] ?? defaultValue;
     if (value === undefined) {
-      throw new Error(`[Config Error] Missing required environment variable: ${key}`);
+      throw new Error(
+        `[Config Error] Missing required environment variable: ${key}`,
+      );
     }
     return value;
   };
 
   return {
-    embeddingModel: get(ENV_KEY_ENUM.EMBEDDING_MODEL, 'embedding-2'),
-    embeddingApiKey: get(ENV_KEY_ENUM.EMBEDDING_API_KEY),
-    embeddingApiUrl: get(ENV_KEY_ENUM.EMBEDDING_API_URL, 'https://open.bigmodel.cn/api/paas/v4/embeddings'),
-    llmModel: get(ENV_KEY_ENUM.LLM_MODEL, 'glm-4-flash'),
-    llmApiKey: get(ENV_KEY_ENUM.LLM_API_KEY),
-    llmApiUrl: get(ENV_KEY_ENUM.LLM_API_URL, 'https://open.bigmodel.cn/api/paas/v4/chat/completions'),
+    embeddingModel: get(ENV_KEY_ENUM.EMBEDDING_MODEL, 'embedding-3'),
+    embeddingApiKey: get(ENV_KEY_ENUM.EMBEDDING_API_KEY, ''),
+    embeddingApiUrl: get(
+      ENV_KEY_ENUM.EMBEDDING_API_URL,
+      'https://open.bigmodel.cn/api/paas/v4/embeddings',
+    ),
+    llmModel: get(ENV_KEY_ENUM.LLM_MODEL, 'deepseek-v4-pro'),
+    llmApiKey: get(ENV_KEY_ENUM.LLM_API_KEY, ''),
+    llmApiUrl: get(
+      ENV_KEY_ENUM.LLM_API_URL,
+      'https://api.deepseek.com/chat/completions',
+    ),
     embeddingDimension: Number(get(ENV_KEY_ENUM.EMBEDDING_DIMENSION, '1024')),
   };
 }
