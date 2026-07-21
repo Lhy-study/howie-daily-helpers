@@ -1,3 +1,8 @@
+export interface HistoryItem {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
 export interface Env {
   EMBEDDING_MODEL?: string;
   EMBEDDING_API_KEY?: string;

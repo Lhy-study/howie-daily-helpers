@@ -5,7 +5,7 @@
 import { Chunk, buildRagMessages } from '../src/rag/index';
 import { createSharedConfig } from 'howie-daily-helpers-shared';
 import OpenAI from 'openai';
-import { Env, VectorizeQueryResponse } from './types';
+import { Env, VectorizeQueryResponse, HistoryItem } from './types';
 
 /** 查询 Vectorize 或内存存储中的文档片段 */
 export async function retrieveChunks(
@@ -80,8 +80,9 @@ export async function streamLLMResponse(
   question: string,
   chunks: Chunk[],
   config: ReturnType<typeof createSharedConfig>,
+  history: HistoryItem[] = [],
 ): Promise<Response> {
-  const messages = buildRagMessages(question, chunks);
+  const messages = buildRagMessages(question, chunks, history);
   const baseURL = normalizeBaseUrl(config.llmApiUrl);
 
   console.log(`[llm] baseURL=${baseURL} model=${config.llmModel}`);

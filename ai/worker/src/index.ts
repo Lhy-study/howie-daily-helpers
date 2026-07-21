@@ -10,7 +10,7 @@
  */
 
 import { retrieveChunks, streamLLMResponse } from './utils';
-import type { Env } from './types';
+import type { Env, HistoryItem } from './types';
 import { createSharedConfig } from 'howie-daily-helpers-shared';
 import { createEmbedder } from '../src/rag/embedder';
 
@@ -32,8 +32,9 @@ export default {
 
     if (request.method === 'POST' && url.pathname === '/ask') {
       try {
-        const body = (await request.json()) as { question: string };
+        const body = (await request.json()) as { question: string; history?: HistoryItem[] };
         const question = body.question?.trim();
+        const history = Array.isArray(body.history) ? body.history : [];
         if (!question) {
           return jsonResponse({ error: '请提供 question 参数' }, 400);
         }
@@ -56,7 +57,7 @@ export default {
         console.log(`[ask] retrieved ${chunks.length} chunks`);
 
         // 调用 LLM 流式返回
-        return await streamLLMResponse(question, chunks, config);
+        return await streamLLMResponse(question, chunks, config, history);
       } catch (err) {
         const message = err instanceof Error ? err.message : '服务器内部错误';
         console.error('[ask] error:', message);

@@ -35,6 +35,11 @@ export interface ChatMessage {
   content: string;
 }
 
+export interface HistoryItem {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
 /** 向量存储接口 */
 export interface IVectorStore {
   query(embedding: number[], topK: number): Promise<Chunk[]>;
