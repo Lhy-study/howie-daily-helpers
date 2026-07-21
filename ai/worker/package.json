@@ -1,0 +1,25 @@
+{
+  "name": "howie-ai-worker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Worker - AI 问答 API 服务, 基于 OpenAI API 实现, 非  node 环境，仅在 Cloudflare Worker 环境下运行 不可以直接使用 node 相关代码",
+  "type": "module",
+  "scripts": {
+    "create:embedder-store": "tsx scripts/create-embedder.ts",
+    "create:vectorize": "wrangler vectorize create howie-docs-index --dimensions=1024 --metric=cosine",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test:api": "tsx scripts/test.ts",
+    "secret:put": "wrangler secret put LLM_API_KEY && wrangler secret put EMBEDDING_API_KEY && wrangler secret put CLOUDFLARE_API_TOKEN"
+  },
+  "dependencies": {
+    "howie-daily-helpers-shared": "workspace:*",
+    "openai": "^6.48.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260717.1",
+    "dotenv": "^17.4.2",
+    "wrangler": "^4.112.0"
+  },
+  "packageManager": "pnpm@10.26.0"
+}

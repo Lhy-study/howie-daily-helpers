@@ -18,7 +18,8 @@
     "@vitejs/plugin-react": "catalog:",
     "vue": "catalog:",
     "vitepress": "1.6.4",
-    "howie-daily-helpers-core": "workspace:*"
+    "howie-daily-helpers-core": "workspace:*",
+    "howie-ai-widget": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "catalog:",

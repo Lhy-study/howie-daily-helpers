@@ -3,3 +3,6 @@ coverage
 cache
 dist
 .env
+.wrangler
+ai-index-data.json
+.dev.vars
