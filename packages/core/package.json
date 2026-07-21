@@ -22,6 +22,11 @@
       "types": "./dist/logger/index.d.ts",
       "import": "./dist/logger/index.js",
       "require": "./dist/logger/index.cjs"
+    },
+    "./eventEmitter": {
+      "types": "./dist/eventEmitter/index.d.ts",
+      "import": "./dist/eventEmitter/index.js",
+      "require": "./dist/eventEmitter/index.cjs"
     }
   },
   "files": [

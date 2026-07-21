@@ -5,6 +5,7 @@ export default defineConfig({
     'index/index': 'src/index.ts',
     'is/index': 'src/is.ts',
     'logger/index': 'src/logger.ts',
+    'eventEmitter/index': 'src/eventEmitter.ts',
   },
   outDir: 'dist',
   dts: {
