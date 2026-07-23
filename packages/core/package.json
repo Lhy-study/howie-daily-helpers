@@ -54,5 +54,8 @@
   ],
   "author": "howie",
   "license": "ISC",
-  "packageManager": "pnpm@10.26.0"
+  "packageManager": "pnpm@10.26.0",
+  "dependencies": {
+    "lru-cache": "^11.5.2"
+  }
 }
