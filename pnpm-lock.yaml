@@ -125,6 +125,16 @@ importers:
         specifier: ^11.5.2
         version: 11.5.2
 
+  packages/react-hooks:
+    dependencies:
+      react:
+        specifier: 'catalog:'
+        version: 18.3.1
+    devDependencies:
+      '@types/react':
+        specifier: 'catalog:'
+        version: 18.3.31
+
 packages:
 
   '@algolia/abtesting@1.21.2':
