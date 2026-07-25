@@ -13,8 +13,6 @@ description: 两个实用的异步工具函数：withRetry 支持重试与指数
 - **`withRetry`**：给异步函数套上重试壳，支持延迟、指数退避、条件重试。
 - **`createSharedAsync`**：基于 LRU + TTL 的 Promise 缓存去重，相同 key 的并发请求共享同一个 Promise，远程请求只发一次。
 
----
-
 ## `withRetry`
 
 带重试机制的异步函数包裹器。适用于网络请求、IO 操作等偶尔失败、重试后可能成功的场景。
@@ -107,8 +105,6 @@ const fetchData = withRetry(
   },
 );
 ```
-
----
 
 ## `createSharedAsync`
 
@@ -216,8 +212,6 @@ try {
 // 失败后再调用，会重新发起请求，而不是拿到缓存的失败结果
 await fetchData();
 ```
-
----
 
 ## 导出总览
 

@@ -22,6 +22,7 @@ export default {
 
     if (!import.meta.env.SSR) {
       for (const [path, loader] of Object.entries(reactDemos)) {
+        
         const name = path
           .split('/')
           .pop()!

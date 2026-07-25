@@ -14,8 +14,6 @@ description: 一个带老化机制的优先级任务队列 PriorityQueue，任�
 适合**中小规模**任务调度场景（几十到几百个任务）。任务数量极大时建议使用堆（Heap）实现，排序开销更低。
 :::
 
----
-
 ## 优先级等级
 
 ```ts
@@ -29,8 +27,6 @@ enum PriorityQueuePriority {
 ```
 
 数值越小，优先级越高。默认优先级为 `Medium` (3)。
-
----
 
 ## `PriorityQueue`
 
@@ -48,8 +44,6 @@ new PriorityQueue<T extends () => void | Promise<void>>()
 |------|------|
 | `queue(task, priority?)` | 推入任务，按优先级插入队列，默认 `Medium` |
 | `append(task)` | 添加到队尾（最低优先级 `Lowest`） |
-
----
 
 ## 调度规则
 
@@ -79,8 +73,6 @@ new PriorityQueue<T extends () => void | Promise<void>>()
 
 最多等 3 次，它就变成最高优先级被执行。
 :::
-
----
 
 ## 示例
 
@@ -156,8 +148,6 @@ q.queue(async () => {
 ::: warning 注意
 任务内部的异常会被捕获并通过 `console.error` 输出，**不会中断队列**，后续任务继续执行。
 :::
-
----
 
 ## 导出总览
 

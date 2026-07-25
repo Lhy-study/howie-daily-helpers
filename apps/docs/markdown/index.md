@@ -16,6 +16,8 @@ hero:
 
 features:
   - title: Core 核心工具
-    details: 无框架依赖的纯 TS 基础工具，涵盖类型判断、日志记录等。文档详见 /core/。
+    details: 无框架依赖的纯 TS 基础工具，涵盖类型判断、日志记录、异步任务调度等。文档详见 /core/。
+  - title: React Hooks 工具集
+    details: 实用的 React Hooks 集合，包含草稿管理、点击外部检测、Web Worker 封装等。文档详见 /react-hooks/。
 ---
 

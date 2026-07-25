@@ -36,6 +36,7 @@ export default defineConfig({
       // 这里的 link 是网站的 URL 路径，以 '/' 开头
       { text: 'Home', link: '/' },
       { text: 'Core', link: '/core/' },
+      { text: 'React Hooks', link: '/react-hooks/' },
     ],
 
     sidebar: [
@@ -49,6 +50,15 @@ export default defineConfig({
           { text: 'AsyncTaskScheduler 任务调度', link: '/core/asyncTaskScheduler' },
           { text: 'asyncWrapper 异步包装', link: '/core/asyncWrapper' },
           { text: 'PriorityQueue 优先级队列', link: '/core/priorityQueue' },
+        ],
+      },
+      {
+        text: 'React Hooks',
+        items: [
+          { text: '概览', link: '/react-hooks/' },
+          { text: 'useDraft 草稿管理', link: '/react-hooks/useDraft' },
+          { text: 'useClickOutside 点击外部检测', link: '/react-hooks/useClickOutside' },
+          { text: 'useWorker Web Worker 封装', link: '/react-hooks/useWorker' },
         ],
       },
     ],
