@@ -130,6 +130,7 @@ export const cssText = `
   /* ---- 输入区域 ---- */
   .ai-chat__input {
     display: flex;
+    align-items: center;
     gap: 10px;
     padding: 16px;
     border-top: 1px solid #eee;
@@ -162,7 +163,6 @@ export const cssText = `
     flex-shrink: 0;
     width: 38px;
     height: 38px;
-    align-self: flex-end;
     border: none;
     border-radius: 8px;
     background: #1a1a1a;
@@ -319,19 +319,34 @@ export const cssText = `
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  .ai-chat__cursor {
-    display: inline-block;
-    width: 2px;
-    height: 1.1em;
-    background: #1a1a1a;
-    margin-left: 1px;
-    vertical-align: text-bottom;
-    border-radius: 1px;
-    animation: ai-chat-blink 0.9s infinite;
+  .ai-chat__loading {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 4px;
+    vertical-align: middle;
   }
 
-  @keyframes ai-chat-blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
+  .ai-chat__loading-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #b0b0b0;
+    animation: ai-chat-bounce 1.2s infinite;
+  }
+
+  .ai-chat__loading-dot:nth-child(1) { animation-delay: 0s; }
+  .ai-chat__loading-dot:nth-child(2) { animation-delay: 0.2s; }
+  .ai-chat__loading-dot:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes ai-chat-bounce {
+    0%, 60%, 100% {
+      transform: translateY(0);
+      opacity: 0.3;
+    }
+    30% {
+      transform: translateY(-6px);
+      opacity: 1;
+    }
   }
 `;

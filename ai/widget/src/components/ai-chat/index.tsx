@@ -274,7 +274,13 @@ function ChatBubble({
           ) : (
             msg.content
           )}
-          {isStreaming && <span className='ai-chat__cursor' />}
+          {isStreaming && (
+            <span className='ai-chat__loading'>
+              <span className='ai-chat__loading-dot' />
+              <span className='ai-chat__loading-dot' />
+              <span className='ai-chat__loading-dot' />
+            </span>
+          )}
         </div>
 
         {!isStreaming && msg.sources && msg.sources.length > 0 && (

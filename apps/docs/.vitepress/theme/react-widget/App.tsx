@@ -56,7 +56,8 @@ export default function Text({
     const root = reactRootRef.current;
     if (!root || !shadowRootRef.current) return;
     if (isOpen) {
-      root.render(<AiChat shadowRoot={shadowRootRef.current} apiUrl={import.meta.env.VITE_API_BASE || ''}/>);
+      const isDev = import.meta.env.DEV;
+      root.render(<AiChat shadowRoot={shadowRootRef.current} apiUrl={!isDev ? import.meta.env.VITE_API_BASE : 'http://127.0.0.1:8787'}/>);
     } else {
       root.render(null);
     }
