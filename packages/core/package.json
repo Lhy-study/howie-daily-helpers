@@ -42,9 +42,9 @@
     "test:coverage": "vitest run --coverage",
     "prepublishOnly": "pnpm run build && pnpm run test",
     "publish:release": "pnpm publish --access public",
-    "publish:minor": "pnpm version minor && pnpm run publish",
-    "publish:patch": "pnpm version patch && pnpm run publish",
-    "publish:major": "pnpm version major && pnpm run publish"
+    "publish:minor": "pnpm version minor && pnpm run publish:release",
+    "publish:patch": "pnpm version patch && pnpm run publish:release",
+    "publish:major": "pnpm version major && pnpm run publish:release"
   },
   "keywords": [
     "howie-daily-helpers",
