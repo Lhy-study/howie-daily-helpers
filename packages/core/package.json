@@ -1,6 +1,6 @@
 {
   "name": "howie-daily-helpers-core",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "基础工具函数 （无框架依赖，纯 TS）",
   "type": "module",
   "private": false,
