@@ -47,6 +47,8 @@ export default defineConfig({
           { text: '概览', link: '/core/' },
           { text: 'is 类型判断', link: '/core/is' },
           { text: 'logger 日志记录', link: '/core/logger' },
+          { text: 'EventEmitter 事件发射器', link: '/core/eventEmitter' },
+          { text: 'StateMachine 状态机', link: '/core/machine' },
           { text: 'AsyncTaskScheduler 任务调度', link: '/core/asyncTaskScheduler' },
           { text: 'asyncWrapper 异步包装', link: '/core/asyncWrapper' },
           { text: 'PriorityQueue 优先级队列', link: '/core/priorityQueue' },

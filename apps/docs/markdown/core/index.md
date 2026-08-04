@@ -16,6 +16,8 @@ description: howie-daily-helpers 核心工具函数集合，涵盖类型判断�
 | --- | --- | --- |
 | `is` | 类型判断与值校验工具（类型守卫） | [查看详情 →](./is) |
 | `logger` | 日志记录工具函数 | [查看详情 →](./logger) |
+| `EventEmitter` | 事件发射器，支持 on/off/onOnce/clear 等 | [查看详情 →](./eventEmitter) |
+| `StateMachine` | 轻量级状态机，支持事件驱动状态转移 | [查看详情 →](./machine) |
 | `AsyncTaskScheduler` | 异步并发任务调度器（限制最大并发数） | [查看详情 →](./asyncTaskScheduler) |
 | `withRetry` | 异步重试包裹器（支持退避、条件重试） | [查看详情 →](./asyncWrapper#withretry) |
 | `createSharedAsync` | Promise 缓存去重与结果共享（LRU + TTL） | [查看详情 →](./asyncWrapper#createsharedasync) |
